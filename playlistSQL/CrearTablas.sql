@@ -59,8 +59,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`playlist` (
   CONSTRAINT `fk_playlist_user1`
     FOREIGN KEY (`user_iduser`)
     REFERENCES `mydb`.`user` (`iduser`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -83,8 +83,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`playlist_has_pivit` (
   CONSTRAINT `fk_playlist_has_pivit_pivit1`
     FOREIGN KEY (`pivit_idpivit`)
     REFERENCES `mydb`.`pivit` (`idpivit`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
